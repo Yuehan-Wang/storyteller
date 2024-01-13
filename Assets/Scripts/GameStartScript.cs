@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     }
     void SetInitialTitle()
     {
-        string title = "this is a test title";
+        string title = "this is a test title for the game and this is very very long ahhhhhhhhhhhhhhh";
         titleEditor.SetTitle(title);
     }
 

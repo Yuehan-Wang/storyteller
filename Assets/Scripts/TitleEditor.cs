@@ -42,6 +42,7 @@ public class TitleEditor : MonoBehaviour
             Debug.LogError("Prefab does not contain a Text or Button component.");
         }
     }
+    
 }
 
 
@@ -63,5 +64,22 @@ public class TitleEditor : MonoBehaviour
                 isRemoved[wordObj] = true;
             }
         }
+    }
+
+    public void SubmitTitle()
+    {
+        string title = "";
+        foreach (GameObject wordObj in wordObjects)
+        {
+            if (!isRemoved[wordObj])
+            {
+                Text wordText = wordObj.GetComponentInChildren<Text>();
+                if (wordText != null)
+                {
+                    title += wordText.text + " ";
+                }
+            }
+        }
+        Debug.Log("Title: " + title);
     }
 }

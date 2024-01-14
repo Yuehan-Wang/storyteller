@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class TitleEditor : MonoBehaviour
 {
@@ -87,5 +88,10 @@ public class TitleEditor : MonoBehaviour
         Debug.Log("Title Original: "+ titleOriginal);
         Debug.Log( "Title changed to: " + title);
         titleManager.EvaluateTitle(titleOriginal, title);
+    }
+
+    public void LoadOfficeScene()
+    {
+        SceneManager.LoadScene("OfficeScene");
     }
 }

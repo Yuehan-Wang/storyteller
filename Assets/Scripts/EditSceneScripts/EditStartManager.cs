@@ -1,16 +1,10 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class EditStartManager : MonoBehaviour
 {
     public TitleEditor titleEditor;
     void Start()
     {
-        InitializeGameSettings();
-    }
-
-    void InitializeGameSettings()
-    {
-        Debug.Log("game init");
         SetInitialTitle();
     }
     void SetInitialTitle()
